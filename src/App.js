@@ -12,6 +12,7 @@ import {
   Router
 } from "react-router-dom";
 import Aouth from './components/autentication/Aouth';
+import FormHandler from './components/FormHandler/FormHandler';
 
 
 
@@ -29,6 +30,7 @@ class App extends React.Component {
 
         <Navigation>
      
+     
   
             <Switch>
       
@@ -37,7 +39,7 @@ class App extends React.Component {
            
         
       
-              <Route path="/aouth" component={Aouth} />
+              <Route path="/form" component={FormHandler} />
 
             </Switch>
          

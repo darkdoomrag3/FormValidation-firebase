@@ -25,7 +25,7 @@ const Navigation = (props) => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="/" className='text-color' style={{ color: 'red' }}>Home</Nav.Link>
-              <Nav.Link href="/aouth" className='text-color' style={{ color: 'red' }}>Rejister</Nav.Link>
+              <Nav.Link href="/form" className='text-color' style={{ color: 'red' }}>Rejister</Nav.Link>
               <CartDropDown />
             </Nav>
 
