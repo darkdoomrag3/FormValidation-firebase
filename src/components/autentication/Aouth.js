@@ -5,7 +5,8 @@ import ProfilePage from '../ProfilePage/ProfilePage';
 import PasswordReset from '../Passwordreset/PasswordReset ';
 import {
 
-    Router
+    Router,
+    Route
   } from "react-router-dom";
 
 
@@ -17,12 +18,15 @@ const Aouth = () => {
        user ?    
           <ProfilePage/>
           :
-          <Router>
-           <SignUp/>
+         <>
+          <Route>
+           <SignUp path="/signup"/>
           <SignIn path="/signin" />
         
             <PasswordReset path="/passwordreset" />
-            </Router>
+           
+           </Route>
+           </>
       
     )
 }

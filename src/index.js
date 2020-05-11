@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
 
 <BrowserRouter>
-        <App />
+<Route path="/" component={ App }/>
     </BrowserRouter>
 
 

@@ -36,9 +36,6 @@ class App extends React.Component {
       
 
               <Route path="/" exact component={Movies} />
-           
-        
-      
               <Route path="/form" component={FormHandler} />
 
             </Switch>

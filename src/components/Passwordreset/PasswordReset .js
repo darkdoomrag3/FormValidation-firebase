@@ -3,7 +3,7 @@ import {
    Link
   
   } from "react-router-dom";
-
+  import {auth} from "../../firebase";
 
 const PasswordReset = () => {
     const [email, setEmail] = useState("");
@@ -15,9 +15,21 @@ const PasswordReset = () => {
             setEmail(value);
         }
     };
+ 
+
     const sendResetEmail = event => {
         event.preventDefault();
-    };
+        auth
+          .sendPasswordResetEmail(email)
+          .then(() => {
+            setEmailHasBeenSent(true);
+            setTimeout(() => {setEmailHasBeenSent(false)}, 3000);
+          })
+          .catch(() => {
+            setError("Error resetting password");
+          });
+      };
+
     return (
         <div className="mt-8">
             <h1 className="text-xl text-center font-bold mb-3">
